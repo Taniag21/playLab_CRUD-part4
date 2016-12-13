@@ -16,6 +16,9 @@ public class Product extends Model {
     @Id
     private Long id;
 
+    @MantToOne
+    private Category category;
+
     // Other fields marked as being required (for validation purposes)
     @Constraints.Required
     private String name;

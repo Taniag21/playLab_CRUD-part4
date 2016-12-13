@@ -23,6 +23,12 @@
 		<!-- Hidden ID field - required for product updates -->
 		@inputText(addProductForm("id"), '_label -> "", 'hidden -> "hidden")
 
+		@select(
+			addProductForm("category.id"),
+			options(Category.options),
+			'_label -> "Category", '_default -> " --Choose a category --",
+			'_showConstraints -> false, '_class -> "form-control"
+		)
 	<!-- Add a submit button -->
   <div class="actions">
       <input type="submit" value="Save" class="btn btn-primary">
